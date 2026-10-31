@@ -556,7 +556,7 @@ namespace {
         // v2.57: hidden in practice mode (practice runs can't be submitted, and it crowded the
         // checkpoint buttons); always shown in normal mode while the buffer is on.
         auto* layer = GameManager::get()->m_playLayer;
-        buf.watermark->setVisible(buf.enabled && !(layer && layer->m_isPracticeMode));
+        buf.watermark->setVisible(false);
         refreshBarEdge();
         // v2.79: a custom TPS is always shown
         auto tpsText = buf.tps != 240 ? fmt::format("  |  {} TPS", buf.tps) : std::string();
